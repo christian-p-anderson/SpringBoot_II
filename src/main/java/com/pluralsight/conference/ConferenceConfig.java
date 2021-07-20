@@ -13,7 +13,7 @@ public class ConferenceConfig implements WebMvcConfigurer {
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/files/**") //the path we want to resolve to
-                .addResourceLocations("/WEB-INF/pdf/");
+                .addResourceLocations("/WEB-INF/pdf/"); //the location of our pdfs
     }
 
     @Bean
