@@ -10,6 +10,9 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 @Configuration
 public class ConferenceConfig implements WebMvcConfigurer {
 
+    /*create a handler to create our own resources custom path | created a custom path that went to a different place
+    through our file system
+    */
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/files/**") //the path we want to resolve to
