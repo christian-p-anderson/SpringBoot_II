@@ -2,6 +2,7 @@ package com.pluralsight.conference.controller;
 
 import com.pluralsight.conference.model.User;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,6 +19,13 @@ public class UserController {
         user.setFirstname(firstname);
         user.setLastname(lastname);
         user.setAge(age);
+
+        return user;
+    }
+
+    @PostMapping("/user")
+    public User postUser(User user) {
+        System.out.println("User firstname: " + user.getFirstname());
 
         return user;
     }
